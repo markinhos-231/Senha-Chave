@@ -14,13 +14,19 @@ senhaInput.addEventListener("input", () => {
         forcaSenha.textContent = "Digite uma senha...";
         forcaSenha.style.background = "#ccc";
     } else if (forca <= 2) {
-        forcaSenha.textContent = "Senha fraca 😬";
+        forcaSenha.textContent = "Senha fraca";
         forcaSenha.style.background = "#ff4d4d";
     } else if (forca === 3) {
-        forcaSenha.textContent = "Senha média 🙂";
+        forcaSenha.textContent = "Senha média";
         forcaSenha.style.background = "#ffcc00";
     } else {
-        forcaSenha.textContent = "Senha forte 💪";
+        forcaSenha.textContent = "Senha forte";
         forcaSenha.style.background = "#4CAF50";
+
+        // Pedir confirmação
+        let confirmar = confirm("Deseja confirmar esta senha?");
+        if (confirmar) {
+            alert("Parabéns, senha criada");
+        }
     }
 });
